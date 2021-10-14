@@ -53,12 +53,12 @@ func (group *RouterGroup) addRoute(method string, comp string, handler HandlerFu
 
 // GET defines the method to add GET request
 func (group *RouterGroup) GET(pattern string, handler HandlerFunc) {
-	group.engine.addRoute("GET", pattern, handler)
+	group.addRoute("GET", pattern, handler)
 }
 
 // POST defines the method to add POST request
 func (group *RouterGroup) POST(pattern string, handler HandlerFunc) {
-	group.engine.addRoute("POST", pattern, handler)
+	group.addRoute("POST", pattern, handler)
 }
 
 // Run defines the method to start a http server
